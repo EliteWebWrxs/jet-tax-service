@@ -41,37 +41,29 @@
   />
   <link rel="canonical" href="https://jettaxservicecorp.com/small-business" />
 
-  <!-- Structured Data -->
+  <!-- Structured Data - Service Page -->
   {@html `
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Service",
       "serviceType": "Small Business Formation and Support Services",
+      "name": "Small Business Solutions",
+      "description": "Comprehensive small business services including LLC formation, bookkeeping, payroll, and compliance",
+      "url": "https://jettaxservicecorp.com/small-business",
       "provider": {
-        "@type": "ProfessionalService",
-        "name": "JET Tax Service Corp",
-        "telephone": "+1-786-369-9058",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "4929 N University Drive",
-          "addressLocality": "Lauderhill",
-          "addressRegion": "FL",
-          "postalCode": "33351",
-          "addressCountry": "US"
+        "@id": "https://jettaxservicecorp.com/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "State",
+          "name": "Florida"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
         }
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "United States"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "bestRating": "5",
-        "worstRating": "1",
-        "ratingCount": "150"
-      },
+      ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Small Business Services",
@@ -80,35 +72,40 @@
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "LLC Formation"
+              "name": "LLC Formation",
+              "description": "Complete LLC formation and registration services"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Bookkeeping Services"
+              "name": "Bookkeeping Services",
+              "description": "Professional bookkeeping for small businesses"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Payroll Solutions"
+              "name": "Payroll Solutions",
+              "description": "Complete payroll management and compliance"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Business Compliance"
+              "name": "Business Compliance",
+              "description": "Ongoing compliance and regulatory support"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "BOI Reporting"
+              "name": "BOI Reporting",
+              "description": "Beneficial Ownership Information reporting services"
             }
           }
         ]

@@ -42,56 +42,8 @@
   />
   <link rel="canonical" href="https://jettaxservicecorp.com/" />
 
-  <!-- Structured Data -->
+  <!-- Structured Data - Home Page FAQ -->
   {@html `
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "JET Tax Service Corp",
-      "description": "Professional tax filing, planning, and small business services in Florida and nationwide",
-      "url": "https://jettaxservicecorp.com",
-      "telephone": "+1-786-369-9058",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "4929 N University Drive",
-        "addressLocality": "Lauderhill",
-        "addressRegion": "FL",
-        "postalCode": "33351",
-        "addressCountry": "US"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "26.1679",
-        "longitude": "-80.2126"
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "10:00",
-        "closes": "17:00"
-      },
-      "priceRange": "$$",
-      "areaServed": {
-        "@type": "Country",
-        "name": "United States"
-      },
-      "sameAs": [
-        "https://www.facebook.com/people/Jet-Tax-Service-Corp/61570089770520/",
-        "https://www.instagram.com/askjettax/",
-        "https://x.com/AskJetTax",
-        "https://www.youtube.com/@jettaxservicescorp"
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "bestRating": "5",
-        "worstRating": "1",
-        "ratingCount": "250"
-      }
-    }
-    </script>
-
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",

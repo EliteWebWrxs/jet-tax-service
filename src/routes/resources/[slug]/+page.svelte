@@ -1,54 +1,99 @@
 <script>
+  // @ts-nocheck
+
   import { page } from '$app/stores';
 
   const resourcesData = {
     'business-tax-checklist': {
-      title: 'Business Tax Documents Checklist',
+      title: 'Business Tax Filing Checklist',
       category: 'Tax Filing',
       icon: '🏢',
-      description: 'Everything you need to prepare accurate and complete business tax returns.',
+      description:
+        'Provide the following documents and information to ensure accurate and timely preparation of your business tax return. Upload all relevant tax documents to your existing portal account or go to our website to sign up for a portal account.',
       sections: [
         {
-          title: 'Business Income Records',
+          title: 'General Business Information',
           items: [
-            'Annual profit & loss statement',
-            'Sales records and 1099-K forms',
-            'Merchant account statements',
-            'Bank statements for all business accounts',
-            'Investment income (1099-INT, 1099-DIV)',
-            'Rental income from business property'
+            'Business name, address, and contact information',
+            'Federal Employer Identification Number (EIN)',
+            'State Tax ID (if applicable)',
+            'Business entity type (e.g., LLC, S-Corp, C-Corp, Partnership, Sole Proprietor)',
+            'Business formation documents (e.g., Articles of Incorporation/Organization)',
+            "Prior year's tax return"
+          ]
+        },
+        {
+          title: 'Income Documentation',
+          items: [
+            'Bank statements (business checking/savings accounts)',
+            'Income records (e.g., sales, receipts, invoices)',
+            'Form 1099-NEC/MISC/K (for payments received)',
+            'Interest income statements (Form 1099-INT or similar)',
+            'Rental income records (if applicable)'
           ]
         },
         {
           title: 'Expense Documentation',
           items: [
-            'Receipts for major purchases',
-            'Vehicle mileage logs',
-            'Home office expense calculations',
-            'Insurance premiums',
-            'Professional fees (legal, accounting)',
+            'Receipts for all business-related expenses',
+            'Rent or lease payments (office space, equipment)',
+            'Utility bills (electricity, internet, phone)',
             'Advertising and marketing expenses',
-            'Office supplies and equipment'
+            'Professional fees (e.g., legal, accounting)',
+            'Employee salaries and benefits',
+            'Contractor payments (including Forms 1099 issued)',
+            'Travel, meal, and entertainment expenses (with supporting documentation)',
+            'Vehicle expenses (mileage logs or actual expense records)'
           ]
         },
         {
-          title: 'Payroll & Employee Records',
+          title: 'Assets and Depreciation',
           items: [
-            'Payroll reports and summaries',
-            'Form 941 quarterly filings',
-            'W-2 and W-3 forms',
-            '1099-NEC for contractors',
-            'State unemployment tax records'
+            'List of business assets (purchased, sold, or disposed during the year)',
+            'Purchase date, price, and documentation for new equipment or property',
+            'Depreciation schedules from previous years'
           ]
         },
         {
-          title: 'Business Information',
+          title: 'Inventory (if applicable)',
           items: [
-            'EIN (Employer Identification Number)',
-            'Business licenses and permits',
-            'Partnership or corporate documents',
-            'Depreciation schedules',
-            'Prior year business returns'
+            'Inventory valuation at the beginning and end of the year',
+            'Cost of goods sold (COGS) calculation and records'
+          ]
+        },
+        {
+          title: 'Tax Documents',
+          items: [
+            'Estimated tax payments made (dates and amounts)',
+            'Payroll tax filings (Forms 940, 941, W-2, W-3)',
+            'Sales tax filings (if applicable)',
+            'Property tax payments for business assets'
+          ]
+        },
+        {
+          title: 'Loan and Financing Records',
+          items: [
+            'Loan agreements and repayment schedules',
+            'Interest paid on business loans (Form 1098 or equivalent)',
+            'Line of credit statements'
+          ]
+        },
+        {
+          title: 'Additional Documentation',
+          items: [
+            'Home office deduction details (if applicable): square footage of home vs. office space, utility bills, and insurance',
+            'Health insurance premiums paid for employees or self',
+            'Retirement contributions (e.g., SEP IRA, SIMPLE IRA)',
+            'Details on any grants or government assistance received (e.g., PPP loan forgiveness documents)',
+            'Any correspondence from the IRS or state tax authorities'
+          ]
+        },
+        {
+          title: 'Tips for Submission',
+          items: [
+            'Organize documents digitally or in labeled folders',
+            'Highlight any significant changes from the previous year (new hires, new locations, etc.)',
+            'Provide your tax preparer with contact information for questions or clarifications'
           ]
         }
       ],
@@ -59,50 +104,76 @@
       category: 'Business Formation',
       icon: '🚀',
       description:
-        'A complete guide for new entrepreneurs to successfully launch and manage their business.',
+        "Starting a business is exciting but requires careful planning and organization to ensure financial and tax compliance. Here's a step-by-step checklist to guide you through your first year of business ownership. Sign up for a New Small Business Consult on our website to help you start your business quickly, efficiently, ensure compliance (saving time & money), and receive discounted ongoing support.",
       sections: [
         {
-          title: 'Pre-Launch Essentials',
+          title: '1. Business Formation and Legal Setup',
           items: [
-            'Choose your business structure (LLC, Corp, etc.)',
-            'Select and register business name',
-            'Apply for EIN from IRS',
-            'Register with state and local authorities',
-            'Open business bank account',
-            'Set up accounting system'
+            'Choose a Business Structure: Sole proprietorship, LLC, partnership, corporation, etc.',
+            'Register Your Business Name',
+            'Obtain an EIN (Employer Identification Number)',
+            'Open a Business Bank Account'
           ]
         },
         {
-          title: 'Legal & Compliance',
+          title: '2. Licensing and Permits',
           items: [
-            'Obtain necessary business licenses',
-            'Apply for sales tax permit (if needed)',
-            'Get business insurance',
-            'Create operating agreement or bylaws',
-            'File beneficial ownership information (BOI)',
-            'Set up registered agent service'
+            'Research federal, state, and local licenses or permits required for your industry',
+            'Keep documentation for annual renewals and compliance'
           ]
         },
         {
-          title: 'Financial Setup',
+          title: '3. Accounting and Record keeping',
           items: [
-            'Choose accounting method (cash vs. accrual)',
-            'Set up bookkeeping system',
-            'Establish business credit',
-            'Plan for estimated quarterly taxes',
-            'Set up payroll (if hiring employees)',
-            'Create budget and financial projections'
+            'Set Up an Accounting System: Use software (QuickBooks, Xero, etc.) or hire a professional (We offer specialized Growth Book Keeping plans for businesses with Revenues under $50,000)',
+            'Track Expenses: Categorize receipts and invoices for easy tax preparation',
+            'Monitor Cash Flow: Regularly review income and expenses to maintain financial health',
+            'Retain Business Records: Store records for at least 3–7 years (depending on requirements)'
           ]
         },
         {
-          title: 'Ongoing Operations',
+          title: '4. Tax Compliance',
           items: [
-            'Maintain separate business and personal finances',
-            'Track all business expenses',
-            'Keep organized records',
-            'File annual reports and renewals',
-            'Review and update business plan',
-            'Schedule regular financial reviews'
+            'Understand Your Tax Obligations: Income tax (quarterly estimates may be required), self-employment tax (if applicable), sales tax (if selling goods or services in taxable industries), payroll tax (if you hire employees)',
+            "Register for State Tax Accounts: Contact your state's tax office",
+            'Set Tax Deadlines: Use a calendar to track due dates for tax filings and payments',
+            'Hire a Tax Professional: JET TAX SERVICE CORP can help ensure compliance and maximize deductions'
+          ]
+        },
+        {
+          title: '5. Business Insurance',
+          items: [
+            "Obtain necessary coverage: General liability, professional liability, workers' compensation, etc."
+          ]
+        },
+        {
+          title: '6. Marketing and Branding',
+          items: [
+            'Develop a marketing plan and define your target audience',
+            'Create a website and establish a presence on social media',
+            'Network and promote your services/products'
+          ]
+        },
+        {
+          title: '7. Employment and HR',
+          items: [
+            'Understand labor laws and establish HR policies',
+            'If hiring, file necessary employee paperwork (W-4, I-9, etc.)',
+            'Set up payroll and ensure proper tax withholding'
+          ]
+        },
+        {
+          title: '8. Financial Growth and Planning',
+          items: [
+            'Set short- and long-term business goals',
+            'Consider business loans or lines of credit if needed for growth',
+            'Regularly review financial statements to adjust strategies'
+          ]
+        },
+        {
+          title: '9. Stay Educated',
+          items: [
+            'Our team at Jet Tax Service Corp will keep you informed about changes in tax laws and regulations'
           ]
         }
       ],
@@ -333,14 +404,119 @@
   const slug = $derived($page.params.slug);
   // @ts-ignore
   const resource = $derived(resourcesData[slug]);
+
+  // SEO helpers
+  // @ts-ignore
+  const getKeywords = (slug) => {
+    // @ts-ignore
+    const keywordMap = {
+      'personal-tax-filing-checklist':
+        'personal tax checklist, tax filing documents, W-2 forms, 1099 forms, tax return preparation, individual tax filing, tax documentation',
+      'business-tax-checklist':
+        'business tax checklist, business tax filing, business tax documents, corporate tax preparation, business tax compliance, EIN, business expenses',
+      'first-year-business-checklist':
+        'new business checklist, business formation, startup checklist, business license, EIN application, business setup, first year business',
+      'tax-deduction-guide':
+        'tax deductions, business deductions, personal deductions, tax savings, deductible expenses, tax planning',
+      'quarterly-tax-calendar':
+        'tax calendar, quarterly taxes, tax deadlines, estimated taxes, tax payment dates, tax filing dates',
+      'bookkeeping-best-practices':
+        'bookkeeping, accounting, financial records, bookkeeping tips, business finances, accounting software'
+    };
+    return keywordMap[slug] || 'tax resources, business resources, tax planning';
+  };
+
+  // @ts-ignore
+  const getArticleType = (slug) => {
+    if (
+      slug === 'business-tax-checklist' ||
+      slug === 'personal-tax-filing-checklist' ||
+      slug === 'first-year-business-checklist'
+    ) {
+      return 'HowTo';
+    }
+    return 'Article';
+  };
 </script>
 
 <svelte:head>
   {#if resource}
     <title>{resource.title} | JET Tax Service Corp</title>
     <meta name="description" content={resource.description} />
+    <meta name="keywords" content={getKeywords(slug)} />
+    <link rel="canonical" href="https://jettaxservicecorp.com/resources/{slug}" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://jettaxservicecorp.com/resources/{slug}" />
+    <meta property="og:title" content="{resource.title} | JET Tax Service Corp" />
+    <meta property="og:description" content={resource.description} />
+    <meta property="og:image" content="https://jettaxservicecorp.com/og-image.jpg" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="JET Tax Service Corp" />
+    <meta property="article:publisher" content="JET Tax Service Corp" />
+    <meta property="article:section" content={resource.category} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://jettaxservicecorp.com/resources/{slug}" />
+    <meta name="twitter:title" content="{resource.title} | JET Tax Service Corp" />
+    <meta name="twitter:description" content={resource.description} />
+    <meta name="twitter:image" content="https://jettaxservicecorp.com/og-image.jpg" />
+
+    <!-- Additional SEO -->
+    <meta name="author" content="JET Tax Service Corp" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+
+    <!-- JSON-LD Structured Data -->
+    {@html `<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "${getArticleType(slug)}",
+      "headline": "${resource.title}",
+      "description": "${resource.description.replace(/"/g, '\\"')}",
+      "url": "https://jettaxservicecorp.com/resources/${slug}",
+      "author": {
+        "@id": "https://jettaxservicecorp.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://jettaxservicecorp.com/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://jettaxservicecorp.com/resources/${slug}"
+      },
+      "articleSection": "${resource.category}",
+      "keywords": "${getKeywords(slug)}",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://jettaxservicecorp.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Resources",
+            "item": "https://jettaxservicecorp.com/resources"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "${resource.title}",
+            "item": "https://jettaxservicecorp.com/resources/${slug}"
+          }
+        ]
+      }
+    }
+    </script>`}
   {:else}
     <title>Resource Not Found | JET Tax Service Corp</title>
+    <meta name="robots" content="noindex, nofollow" />
   {/if}
 </svelte:head>
 

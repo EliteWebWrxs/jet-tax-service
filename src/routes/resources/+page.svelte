@@ -11,8 +11,8 @@
     },
     {
       slug: 'business-tax-checklist',
-      title: 'Business Tax Documents Checklist',
-      description: 'Essential documents required for business tax preparation',
+      title: 'Business Tax Filing Checklist',
+      description: 'Comprehensive guide to documents and information needed for accurate business tax preparation',
       category: 'Tax Filing',
       icon: '🏢',
       downloadable: true
@@ -62,11 +62,80 @@
 </script>
 
 <svelte:head>
-  <title>Resources & Downloads | JET Tax Service Corp</title>
+  <title>Tax & Business Resources - Free Guides & Checklists | JET Tax Service Corp</title>
   <meta
     name="description"
-    content="Free tax and business resources including checklists, guides, and calendars to help you stay organized and compliant."
+    content="Free tax and business resources including checklists, guides, and calendars. Download personal tax filing checklists, business tax documents, bookkeeping guides, and tax planning tools."
   />
+  <meta
+    name="keywords"
+    content="tax resources, business tax checklist, personal tax filing, bookkeeping guide, tax deduction guide, quarterly tax calendar, tax planning, business formation checklist"
+  />
+  <link rel="canonical" href="https://jettaxservicecorp.com/resources" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jettaxservicecorp.com/resources" />
+  <meta
+    property="og:title"
+    content="Tax & Business Resources - Free Guides & Checklists | JET Tax Service Corp"
+  />
+  <meta
+    property="og:description"
+    content="Free tax and business resources including checklists, guides, and calendars. Download personal tax filing checklists, business tax documents, bookkeeping guides, and tax planning tools."
+  />
+  <meta property="og:image" content="https://jettaxservicecorp.com/og-image.jpg" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="JET Tax Service Corp" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://jettaxservicecorp.com/resources" />
+  <meta
+    name="twitter:title"
+    content="Tax & Business Resources - Free Guides & Checklists | JET Tax Service Corp"
+  />
+  <meta
+    name="twitter:description"
+    content="Free tax and business resources including checklists, guides, and calendars. Download personal tax filing checklists, business tax documents, bookkeeping guides, and tax planning tools."
+  />
+  <meta name="twitter:image" content="https://jettaxservicecorp.com/og-image.jpg" />
+
+  <!-- Additional SEO -->
+  <meta name="author" content="JET Tax Service Corp" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="English" />
+
+  <!-- JSON-LD Structured Data -->
+  {@html `<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Tax & Business Resources",
+    "description": "Free tax and business resources including checklists, guides, and calendars to help you stay organized and compliant.",
+    "url": "https://jettaxservicecorp.com/resources",
+    "publisher": {
+      "@id": "https://jettaxservicecorp.com/#organization"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://jettaxservicecorp.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Resources",
+          "item": "https://jettaxservicecorp.com/resources"
+        }
+      ]
+    }
+  }
+  </script>`}
 </svelte:head>
 
 <!-- Hero Section -->
@@ -105,7 +174,10 @@
   <!-- Resources Grid -->
   <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
     {#each filteredResources as resource}
-      <div class="card group hover:-translate-y-1">
+      <a
+        href="/resources/{resource.slug}"
+        class="card group hover:-translate-y-1 cursor-pointer block"
+      >
         <!-- Icon & Badge -->
         <div class="flex justify-between items-start mb-4">
           <div
@@ -130,13 +202,10 @@
         <p class="text-gray-600 mb-6">{resource.description}</p>
 
         <!-- CTA -->
-        <a
-          href="/resources/{resource.slug}"
-          class="text-primary-600 font-semibold inline-flex items-center gap-2 group/cta"
-        >
-          {resource.downloadable ? 'Download' : 'Read More'}
+        <div class="text-primary-600 font-semibold inline-flex items-center gap-2">
+          Read More
           <svg
-            class="w-4 h-4 group-hover/cta:translate-x-1 transition-transform"
+            class="w-4 h-4 group-hover:translate-x-1 transition-transform"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -148,8 +217,8 @@
               d="M9 5l7 7-7 7"
             />
           </svg>
-        </a>
-      </div>
+        </div>
+      </a>
     {/each}
   </div>
 
