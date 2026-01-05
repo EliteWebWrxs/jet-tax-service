@@ -1,107 +1,122 @@
-@import '@fontsource/fira-mono';
+@import "tailwindcss";
 
-:root {
-  font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-    Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  --font-mono: 'Fira Mono', monospace;
-  --pure-white: #ffffff;
-  --primary-color: #b9c6d2;
-  --secondary-color: #d0dde9;
-  --tertiary-color: #edf0f8;
-  --accent-color: #ff3e00;
-  --heading-color: rgba(0, 0, 0, 0.7);
-  --text-color: #444444;
-  --background-without-opacity: rgba(255, 255, 255, 0.7);
-  --column-width: 42rem;
-  --column-margin-top: 4rem;
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-heading: 'Poppins', system-ui, sans-serif;
+
+  --color-primary-50: #f0f0fc;
+  --color-primary-100: #e0e0f8;
+  --color-primary-200: #c1c1f1;
+  --color-primary-300: #9090e3;
+  --color-primary-400: #5050d0;
+  --color-primary-500: #1a18a8;
+  --color-primary-600: #09075D;
+  --color-primary-700: #070654;
+  --color-primary-800: #05044a;
+  --color-primary-900: #040340;
+  --color-primary-950: #020230;
+
+  --color-secondary-50: #fef2f2;
+  --color-secondary-100: #fee2e2;
+  --color-secondary-200: #fecaca;
+  --color-secondary-300: #fca5a5;
+  --color-secondary-400: #f87171;
+  --color-secondary-500: #f14438;
+  --color-secondary-600: #ED1900;
+  --color-secondary-700: #c41400;
+  --color-secondary-800: #9b1000;
+  --color-secondary-900: #7a0d00;
+  --color-secondary-950: #5a0900;
 }
 
 body {
+  background: linear-gradient(to bottom, #f0f0fc, #ffffff, #fef2f2);
   min-height: 100vh;
-  margin: 0;
-  background-color: var(--primary-color);
-  background: linear-gradient(
-    180deg,
-    var(--primary-color) 0%,
-    var(--secondary-color) 10.45%,
-    var(--tertiary-color) 41.35%
-  );
+  color: #111827;
 }
 
-body::before {
-  content: '';
-  width: 80vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 10vw;
-  z-index: -1;
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    var(--pure-white) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  opacity: 0.05;
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
 }
 
-#svelte {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 300ms;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
-h1,
-h2,
-p {
-  font-weight: 400;
-  color: var(--heading-color);
+.btn-primary {
+  background-color: var(--color-primary-600);
+  color: white;
 }
 
-p {
-  line-height: 1.5;
+.btn-primary:hover {
+  background-color: var(--color-primary-700);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
 }
 
-a {
-  color: var(--accent-color);
-  text-decoration: none;
+.btn-secondary {
+  background-color: var(--color-secondary-600);
+  color: white;
 }
 
-a:hover {
-  text-decoration: underline;
+.btn-secondary:hover {
+  background-color: var(--color-secondary-700);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
 }
 
-h1 {
-  font-size: 2rem;
-  text-align: center;
+.btn-outline {
+  border: 2px solid var(--color-primary-600);
+  color: var(--color-primary-600);
 }
 
-h2 {
-  font-size: 1rem;
+.btn-outline:hover {
+  background-color: var(--color-primary-600);
+  color: white;
 }
 
-pre {
-  font-size: 16px;
-  font-family: var(--font-mono);
-  background-color: rgba(255, 255, 255, 0.45);
-  border-radius: 3px;
-  box-shadow: 2px 2px 6px rgb(255 255 255 / 25%);
-  padding: 0.5em;
-  overflow-x: auto;
-  color: var(--text-color);
+.card {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 300ms;
+  padding: 1.5rem;
 }
 
-input,
-button {
-  font-size: inherit;
-  font-family: inherit;
+.card:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
-button:focus:not(:focus-visible) {
-  outline: none;
+.section-container {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3rem 1rem;
 }
 
-@media (min-width: 720px) {
-  h1 {
-    font-size: 2.4rem;
+@media (min-width: 640px) {
+  .section-container {
+    padding: 3rem 1.5rem;
   }
+}
+
+@media (min-width: 1024px) {
+  .section-container {
+    padding: 5rem 2rem;
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(to right, var(--color-primary-600), var(--color-secondary-600));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
