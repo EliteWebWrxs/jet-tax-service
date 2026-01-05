@@ -22,7 +22,7 @@
     property="og:description"
     content="Comprehensive small business services including formation, bookkeeping, payroll, and compliance. Expert guidance for entrepreneurs and business owners."
   />
-  <meta property="og:image" content="https://jettaxservicecorp.com/og-image.jpg" />
+  <meta property="og:image" content="https://jettaxservicecorp.com/logo.webp" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -32,7 +32,7 @@
     name="twitter:description"
     content="LLC formation, bookkeeping, payroll, and compliance services for entrepreneurs. 15% discount on annual packages."
   />
-  <meta name="twitter:image" content="https://jettaxservicecorp.com/og-image.jpg" />
+  <meta name="twitter:image" content="https://jettaxservicecorp.com/logo.webp" />
 
   <!-- Additional SEO -->
   <meta
