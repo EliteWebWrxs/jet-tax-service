@@ -1,5 +1,4 @@
 <script>
-  import Hero from '$lib/components/Hero.svelte';
   import ServiceCard from '$lib/components/ServiceCard.svelte';
   import Testimonial from '$lib/components/Testimonial.svelte';
   import FAQItem from '$lib/components/FAQItem.svelte';
@@ -40,6 +39,9 @@
     content="LLC formation, business formation, S-corp, C-corp, bookkeeping services, payroll services, business compliance, BOI reporting, small business consulting, business tax filing"
   />
   <link rel="canonical" href="https://jettaxservicecorp.com/small-business" />
+
+  <!-- Preload Hero Image -->
+  <link rel="preload" as="image" href="/business-2.webp" type="image/webp" />
 
   <!-- Structured Data - Service Page -->
   {@html `
@@ -205,14 +207,79 @@
 </svelte:head>
 
 <!-- Hero Section -->
-<Hero
-  title="Small Business Solutions for Entrepreneurs"
-  subtitle="From startup to scale-up, we provide the financial foundation for your business success"
-  primaryCta="Start Your Business"
-  secondaryCta="View Services"
-  primaryHref="/contact"
-  secondaryHref="#services"
-/>
+<section
+  class="relative bg-cover bg-center md:bg-top text-white overflow-hidden py-20"
+  style="background-image: url('/business-2.webp');"
+>
+  <!-- Gradient Overlay -->
+  <div
+    class="absolute inset-0 bg-gradient-to-br from-primary-900/90 via-primary-800/85 to-secondary-900/90"
+  ></div>
+
+  <div class="relative section-container">
+    <div class="max-w-4xl mx-auto text-center">
+      <!-- Badge -->
+      <div
+        class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6 animate-fade-in"
+      >
+        <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+        <span class="text-sm font-medium">Trusted for Over 25 Years</span>
+      </div>
+
+      <!-- Title -->
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+        Small Business Solutions for Entrepreneurs
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="text-xl md:text-2xl mb-10 text-blue-100 max-w-3xl mx-auto">
+        From startup to scale-up, we provide the financial foundation for your business success
+      </p>
+
+      <!-- CTAs -->
+      <div
+        class="flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center w-full max-w-md sm:max-w-none mx-auto"
+      >
+        <a
+          href="/contact"
+          class="btn bg-white text-primary-700 hover:bg-gray-100 px-8 py-4 text-lg w-full sm:w-auto"
+        >
+          Start Your Business
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M13 7l5 5m0 0l-5 5m5-5H6"
+            />
+          </svg>
+        </a>
+        <a
+          href="#services"
+          class="btn border-2 border-white text-white hover:bg-white/10 px-8 py-4 text-lg w-full sm:w-auto"
+        >
+          View Services
+        </a>
+      </div>
+
+      <!-- Trust Indicators -->
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="text-4xl font-bold mb-2">25+</div>
+          <div class="text-blue-100">Years of Experience</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl font-bold mb-2">10K+</div>
+          <div class="text-blue-100">Clients Served</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl font-bold mb-2">24/7</div>
+          <div class="text-blue-100">Support Available</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Business Formation Section -->
 <section id="services" class="section-container">
@@ -225,7 +292,7 @@
 
   <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
     <ServiceCard
-      icon="🏛️"
+      icon="office"
       title="LLC Formation"
       description="Limited Liability Company setup with full compliance and documentation."
       features={[
@@ -238,7 +305,7 @@
     />
 
     <ServiceCard
-      icon="🤝"
+      icon="users"
       title="Partnership Setup"
       description="Partnership agreements and registration for multi-owner businesses."
       features={['Partnership agreement', 'State filings', 'Tax ID setup', 'Member documents']}
@@ -246,7 +313,7 @@
     />
 
     <ServiceCard
-      icon="📈"
+      icon="trending"
       title="S-Corporation"
       description="S-Corp election and setup for tax-advantaged business structure."
       features={['S-Corp election', 'Bylaws preparation', 'Stock certificates', 'IRS Form 2553']}
@@ -254,7 +321,7 @@
     />
 
     <ServiceCard
-      icon="🏢"
+      icon="briefcase"
       title="C-Corporation"
       description="Full corporation formation for businesses planning to scale."
       features={[
@@ -281,7 +348,7 @@
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       <ServiceCard
-        icon="📚"
+        icon="book"
         title="Bookkeeping Services"
         description="Professional bookkeeping to keep your financial records accurate and up-to-date."
         features={[
@@ -294,7 +361,7 @@
       />
 
       <ServiceCard
-        icon="💰"
+        icon="currency"
         title="Payroll Solutions"
         description="Complete payroll processing including tax filings and employee documentation."
         features={[
@@ -307,7 +374,7 @@
       />
 
       <ServiceCard
-        icon="📋"
+        icon="clipboard"
         title="1099 & W-9 Management"
         description="Contractor documentation and year-end 1099 filing services."
         features={['1099-NEC filing', 'W-9 collection', 'Vendor tracking', 'IRS compliance']}
@@ -315,7 +382,7 @@
       />
 
       <ServiceCard
-        icon="📊"
+        icon="chart"
         title="Financial Statements"
         description="Professional P&L and balance sheets to track your business performance."
         features={[
@@ -328,7 +395,7 @@
       />
 
       <ServiceCard
-        icon="✅"
+        icon="clipboard"
         title="Compliance Package"
         description="Annual compliance maintenance with 15% discount on other services."
         features={[
@@ -341,7 +408,7 @@
       />
 
       <ServiceCard
-        icon="🛡️"
+        icon="shield"
         title="BOI Reporting"
         description="Beneficial Ownership Information reporting for FinCEN compliance."
         features={[
@@ -353,6 +420,26 @@
         ctaHref="/contact"
       />
     </div>
+  </div>
+</section>
+
+<!-- Parallax Section -->
+<section
+  class="relative py-32 bg-cover bg-center md:bg-fixed md:bg-top"
+  style="background-image: url('/business.webp');"
+>
+  <!-- Dark overlay for text readability -->
+  <div class="absolute inset-0 bg-secondary-900/85"></div>
+
+  <!-- Content -->
+  <div class="relative section-container text-center text-white">
+    <h2 class="text-4xl md:text-5xl font-bold mb-6">Build Your Business the Right Way</h2>
+    <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-8">
+      Expert guidance from day one. Let us handle the compliance so you can focus on growth.
+    </p>
+    <a href="/contact" class="btn bg-white text-primary-700 hover:bg-gray-100">
+      Schedule Your Consultation
+    </a>
   </div>
 </section>
 

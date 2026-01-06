@@ -1,4 +1,6 @@
 <script>
+  // @ts-nocheck
+
   const resources = [
     {
       slug: 'personal-tax-filing-checklist',
@@ -6,15 +8,16 @@
       description:
         'Comprehensive guide to documents and information needed for accurate tax return preparation',
       category: 'Tax Filing',
-      icon: '📝',
+      icon: 'document',
       downloadable: true
     },
     {
       slug: 'business-tax-checklist',
       title: 'Business Tax Filing Checklist',
-      description: 'Comprehensive guide to documents and information needed for accurate business tax preparation',
+      description:
+        'Comprehensive guide to documents and information needed for accurate business tax preparation',
       category: 'Tax Filing',
-      icon: '🏢',
+      icon: 'briefcase',
       downloadable: true
     },
     {
@@ -22,7 +25,7 @@
       title: 'First-Year Business Owner Checklist',
       description: 'Step-by-step guide for new entrepreneurs starting their business',
       category: 'Business Formation',
-      icon: '🚀',
+      icon: 'rocket',
       downloadable: true
     },
     {
@@ -30,7 +33,7 @@
       title: 'Tax Deduction Guide',
       description: 'Comprehensive guide to maximizing your tax deductions',
       category: 'Tax Planning',
-      icon: '💰',
+      icon: 'currency',
       downloadable: false
     },
     {
@@ -38,7 +41,7 @@
       title: 'Quarterly Tax Calendar',
       description: 'Important tax deadlines and payment dates for businesses',
       category: 'Tax Planning',
-      icon: '📅',
+      icon: 'calendar',
       downloadable: false
     },
     {
@@ -46,10 +49,24 @@
       title: 'Bookkeeping Best Practices',
       description: 'Essential bookkeeping tips for small business owners',
       category: 'Business Operations',
-      icon: '📚',
+      icon: 'book',
       downloadable: false
     }
   ];
+
+  // Professional SVG icon library
+  const icons = {
+    document:
+      'M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z',
+    briefcase:
+      'M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z',
+    rocket: 'M13 10V3L4 14h7v7l9-11h-7z',
+    currency:
+      'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
+    book: 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253',
+    calendar:
+      'M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z'
+  };
 
   const categories = ['All', ...new Set(resources.map((r) => r.category))];
   let selectedCategory = $state('All');
@@ -181,9 +198,17 @@
         <!-- Icon & Badge -->
         <div class="flex justify-between items-start mb-4">
           <div
-            class="w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform"
+            class="w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform"
           >
-            {resource.icon}
+            <svg
+              class="w-8 h-8 text-white"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d={icons[resource.icon]} />
+            </svg>
           </div>
           {#if resource.downloadable}
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">

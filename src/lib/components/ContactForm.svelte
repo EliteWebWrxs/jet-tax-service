@@ -9,29 +9,48 @@
 
   let submitting = $state(false);
   let submitted = $state(false);
+  let error = $state('');
 
   // @ts-ignore
   async function handleSubmit(e) {
     e.preventDefault();
     submitting = true;
+    error = '';
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
 
-    submitted = true;
-    submitting = false;
+      const result = await response.json();
 
-    // Reset form
-    setTimeout(() => {
-      submitted = false;
-      formData = {
-        name: '',
-        email: '',
-        phone: '',
-        service: '',
-        message: ''
-      };
-    }, 3000);
+      if (result.success) {
+        submitted = true;
+
+        // Reset form after success
+        setTimeout(() => {
+          submitted = false;
+          formData = {
+            name: '',
+            email: '',
+            phone: '',
+            service: '',
+            message: ''
+          };
+        }, 5000);
+      } else {
+        error = result.error || 'Failed to send message. Please try again.';
+      }
+    } catch (err) {
+      console.error('Form submission error:', err);
+      error = 'An error occurred. Please try again or contact us directly.';
+    } finally {
+      submitting = false;
+    }
   }
 </script>
 
@@ -174,6 +193,13 @@
           </div>
         {:else}
           <form onsubmit={handleSubmit} class="space-y-4">
+            {#if error}
+              <div class="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
+                <p class="font-medium">Error</p>
+                <p class="text-sm">{error}</p>
+              </div>
+            {/if}
+
             <div>
               <label for="name" class="block text-sm font-medium text-gray-700 mb-1"
                 >Full Name *</label

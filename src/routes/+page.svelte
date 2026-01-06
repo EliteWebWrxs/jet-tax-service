@@ -1,5 +1,4 @@
 <script>
-  import Hero from '$lib/components/Hero.svelte';
   import ServiceCard from '$lib/components/ServiceCard.svelte';
   import Testimonial from '$lib/components/Testimonial.svelte';
   import FAQItem from '$lib/components/FAQItem.svelte';
@@ -41,6 +40,9 @@
     content="tax preparation, tax filing, business tax, personal tax, tax planning, Florida tax services, small business formation, bookkeeping, payroll services"
   />
   <link rel="canonical" href="https://jettaxservicecorp.com/" />
+
+  <!-- Preload Hero Image -->
+  <link rel="preload" as="image" href="/tax-service-2.webp" type="image/webp" />
 
   <!-- Structured Data - Home Page FAQ -->
   {@html `
@@ -136,14 +138,79 @@
 </svelte:head>
 
 <!-- Hero Section -->
-<Hero
-  title="Your Trusted Partner for Virtual Tax & Small Business Solutions"
-  subtitle="Serving Florida and nationwide with concierge-level service for over 25 years"
-  primaryCta="Get Started"
-  secondaryCta="View Services"
-  primaryHref="/contact"
-  secondaryHref="#services"
-/>
+<section
+  class="relative bg-cover bg-center md:bg-top text-white overflow-hidden pt-10"
+  style="background-image: url('/tax-service-2.webp');"
+>
+  <!-- Gradient Overlay -->
+  <div
+    class="absolute inset-0 bg-gradient-to-br from-primary-900/90 via-primary-800/85 to-secondary-900/90"
+  ></div>
+
+  <div class="relative section-container">
+    <div class="max-w-4xl mx-auto text-center">
+      <!-- Badge -->
+      <div
+        class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6 animate-fade-in"
+      >
+        <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+        <span class="text-sm font-medium">Trusted for Over 25 Years</span>
+      </div>
+
+      <!-- Title -->
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+        Your Trusted Partner for Virtual Tax & Small Business Solutions
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="text-xl md:text-2xl mb-10 text-blue-100 max-w-3xl mx-auto">
+        Serving Florida and nationwide with concierge-level service for over 25 years
+      </p>
+
+      <!-- CTAs -->
+      <div
+        class="flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center w-full max-w-md sm:max-w-none mx-auto"
+      >
+        <a
+          href="/contact"
+          class="btn bg-white text-primary-700 hover:bg-gray-100 px-8 py-4 text-lg w-full sm:w-auto"
+        >
+          Get Started
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M13 7l5 5m0 0l-5 5m5-5H6"
+            />
+          </svg>
+        </a>
+        <a
+          href="#services"
+          class="btn border-2 border-white text-white hover:bg-white/10 px-8 py-4 text-lg w-full sm:w-auto"
+        >
+          View Services
+        </a>
+      </div>
+
+      <!-- Trust Indicators -->
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="text-4xl font-bold mb-2">25+</div>
+          <div class="text-blue-100">Years of Experience</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl font-bold mb-2">10K+</div>
+          <div class="text-blue-100">Clients Served</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl font-bold mb-2">24/7</div>
+          <div class="text-blue-100">Support Available</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Services Section -->
 <section id="services" class="section-container">
@@ -156,7 +223,7 @@
 
   <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
     <ServiceCard
-      icon="📋"
+      icon="document"
       title="Personal Tax Filing"
       description="Expert individual tax preparation with a focus on accuracy and compliance. Maximize your refunds while staying compliant with IRS regulations."
       features={[
@@ -169,7 +236,7 @@
     />
 
     <ServiceCard
-      icon="🏢"
+      icon="briefcase"
       title="Business Tax Filing"
       description="Professional business tax services for companies of all sizes. Minimize tax liability and optimize your business finances."
       features={[
@@ -182,7 +249,7 @@
     />
 
     <ServiceCard
-      icon="💡"
+      icon="chart"
       title="Tax Planning & Advisory"
       description="Strategic tax planning to minimize your tax obligations and optimize your financial health throughout the year."
       features={[
@@ -195,7 +262,7 @@
     />
 
     <ServiceCard
-      icon="📨"
+      icon="clipboard"
       title="IRS Notice Review"
       description="Professional assistance with IRS correspondence. We'll help you understand and respond to any IRS notices or audits."
       features={[
@@ -208,7 +275,7 @@
     />
 
     <ServiceCard
-      icon="✏️"
+      icon="document"
       title="Tax Amendments"
       description="Need to amend a previous return? We handle all types of tax amendments with accuracy and efficiency."
       features={[
@@ -221,7 +288,7 @@
     />
 
     <ServiceCard
-      icon="🛡️"
+      icon="shield"
       title="Fraud Alert Package"
       description="Annual enrollment program to protect your identity and tax information from fraudulent activity."
       features={[
@@ -232,6 +299,26 @@
       ]}
       ctaHref="/contact"
     />
+  </div>
+</section>
+
+<!-- Parallax Section 1 -->
+<section
+  class="relative py-32 bg-cover bg-center md:bg-fixed md:bg-top"
+  style="background-image: url('/taxes.webp');"
+>
+  <!-- Dark overlay for text readability -->
+  <div class="absolute inset-0 bg-gray-900/70"></div>
+
+  <!-- Content -->
+  <div class="relative section-container text-center text-white">
+    <h2 class="text-4xl md:text-5xl font-bold mb-6">Maximize Your Tax Savings</h2>
+    <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-8">
+      Strategic tax planning and expert preparation to keep more money in your pocket
+    </p>
+    <a href="/contact" class="btn bg-white text-primary-700 hover:bg-gray-100">
+      Get Your Free Consultation
+    </a>
   </div>
 </section>
 
@@ -461,6 +548,27 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- Parallax Section 2 -->
+<section
+  class="relative py-32 bg-cover bg-center md:bg-fixed md:bg-top"
+  style="background-image: url('/taxes-1.webp');"
+>
+  <!-- Dark overlay for text readability -->
+  <div class="absolute inset-0 bg-primary-900/80"></div>
+
+  <!-- Content -->
+  <div class="relative section-container text-center text-white">
+    <h2 class="text-4xl md:text-5xl font-bold mb-6">Grow Your Business with Confidence</h2>
+    <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-8">
+      From formation to compliance, we provide the financial foundation your business needs to
+      thrive
+    </p>
+    <a href="/small-business" class="btn bg-white text-primary-700 hover:bg-gray-100">
+      Explore Business Services
+    </a>
   </div>
 </section>
 

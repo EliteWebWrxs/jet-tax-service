@@ -25,7 +25,7 @@
     {
       question: 'What information should I prepare before contacting you?',
       answer:
-        'For tax services, have your previous tax returns and any relevant financial documents ready. For business services, prepare information about your business structure and goals. We\'ll guide you through everything else!'
+        "For tax services, have your previous tax returns and any relevant financial documents ready. For business services, prepare information about your business structure and goals. We'll guide you through everything else!"
     }
   ];
 </script>
@@ -163,14 +163,19 @@
     }
     </script>
   `}
-
 </svelte:head>
 
 <!-- Hero Section -->
 <section
-  class="bg-gradient-to-br from-primary-700 via-primary-600 to-secondary-600 text-white py-20"
+  class="relative bg-cover bg-center text-white py-32"
+  style="background-image: url('/contact.webp');"
 >
-  <div class="section-container">
+  <!-- Dark overlay for text readability -->
+  <div
+    class="absolute inset-0 bg-gradient-to-br from-primary-900/90 via-primary-800/85 to-secondary-900/90"
+  ></div>
+
+  <div class="relative section-container">
     <div class="max-w-4xl mx-auto text-center">
       <h1 class="text-5xl md:text-6xl font-bold mb-6">Let's Get Started</h1>
       <p class="text-xl md:text-2xl text-blue-100 mb-8">
@@ -212,27 +217,59 @@
   <div class="grid md:grid-cols-3 gap-8 -mt-12">
     <div class="card text-center">
       <div
-        class="w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-xl flex items-center justify-center text-3xl mx-auto mb-4"
+        class="w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-xl flex items-center justify-center mx-auto mb-4"
       >
-        ⚡
+        <svg
+          class="w-8 h-8 text-white"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
       </div>
       <h3 class="text-xl font-bold mb-2">24/7 Availability</h3>
       <p class="text-gray-600">Call or text anytime, we're always ready to help</p>
     </div>
     <div class="card text-center">
       <div
-        class="w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-xl flex items-center justify-center text-3xl mx-auto mb-4"
+        class="w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-xl flex items-center justify-center mx-auto mb-4"
       >
-        🌐
+        <svg
+          class="w-8 h-8 text-white"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
       </div>
       <h3 class="text-xl font-bold mb-2">Virtual Services</h3>
       <p class="text-gray-600">Serving clients nationwide with online consultations</p>
     </div>
     <div class="card text-center">
       <div
-        class="w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-xl flex items-center justify-center text-3xl mx-auto mb-4"
+        class="w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-xl flex items-center justify-center mx-auto mb-4"
       >
-        💬
+        <svg
+          class="w-8 h-8 text-white"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+          />
+        </svg>
       </div>
       <h3 class="text-xl font-bold mb-2">Fast Response</h3>
       <p class="text-gray-600">We respond to all inquiries within 24 hours</p>
@@ -271,75 +308,66 @@
     </div>
 
     <div class="grid md:grid-cols-2 gap-8">
-      <!-- Map/Location Info -->
-      <div class="card">
-        <h3 class="text-2xl font-bold mb-4">Office Location</h3>
-        <div class="space-y-4">
-          <div class="flex items-start gap-3">
-            <svg
-              class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-              />
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-              />
-            </svg>
-            <div>
-              <p class="font-semibold">Address</p>
-              <p class="text-gray-600">
-                4929 N University Drive<br />
-                Lauderhill, FL 33351
-              </p>
+      <!-- Map -->
+      <div class="card p-0 overflow-hidden">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.6486889!2d-80.24545!3d26.1403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9a8f4c7c7c7c7%3A0x0!2s4929%20N%20University%20Dr%2C%20Lauderhill%2C%20FL%2033351!5e0!3m2!1sen!2sus!4v1234567890"
+          width="100%"
+          height="400"
+          style="border:0;"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="JET Tax Service Corp Office Location"
+        ></iframe>
+        <div class="p-6">
+          <h3 class="text-2xl font-bold mb-4">Office Location</h3>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <svg
+                class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+              <div>
+                <p class="font-semibold">Address</p>
+                <p class="text-gray-600">
+                  4929 N University Drive<br />
+                  Lauderhill, FL 33351
+                </p>
+              </div>
             </div>
-          </div>
 
-          <div class="flex items-start gap-3">
-            <svg
-              class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+            <a
+              href="https://maps.google.com/?q=4929+N+University+Drive+Lauderhill+FL+33351"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-outline w-full"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-            </svg>
-            <div>
-              <p class="font-semibold">Parking</p>
-              <p class="text-gray-600">Free parking available on-site</p>
-            </div>
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"
+                />
+              </svg>
+              Get Directions
+            </a>
           </div>
-
-          <a
-            href="https://maps.google.com/?q=4929+N+University+Drive+Lauderhill+FL+33351"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-outline w-full"
-          >
-            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"
-              />
-            </svg>
-            Get Directions
-          </a>
         </div>
       </div>
 
@@ -402,11 +430,14 @@
       Don't let tax complexity hold you back. Contact us today for a free consultation.
     </p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="tel:7863699058" class="btn bg-white text-primary-700 hover:bg-gray-100 px-8 py-4 text-lg">
+      <a
+        href="tel:7863699058"
+        class="btn bg-white text-primary-700 hover:bg-gray-100 px-8 py-4 text-lg"
+      >
         Call Now
       </a>
-      <a href="/services" class="btn border-2 border-white text-white hover:bg-white/10 px-8 py-4 text-lg">
-        View Services
+      <a href="/" class="btn border-2 border-white text-white hover:bg-white/10 px-8 py-4 text-lg">
+        Learn More
       </a>
     </div>
   </div>
