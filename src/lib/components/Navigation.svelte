@@ -7,7 +7,8 @@
   const navItems = [
     { label: 'Tax Services', href: '/' },
     { label: 'Small Business', href: '/small-business' },
-    { label: 'Resources', href: '/resources' }
+    { label: 'Resources', href: '/resources' },
+    { label: 'Pricing', href: '/pricing' }
   ];
 </script>
 
