@@ -128,7 +128,7 @@
           "name": "How do I get started?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Getting started is easy! Click the 'Get Started' button to fill out our contact form, call us at 786-369-9058, or text us anytime. We'll schedule a free consultation to discuss your needs, provide a quote, and get you set up in our secure client portal."
+            "text": "Getting started is easy! Click the 'Get Started' button to fill out our contact form, call us at 786-369-9058 or 954-667-0855 during business hours (Mon-Fri 10am-5pm), or text 786-369-9058 anytime 24/7. We'll schedule a free consultation to discuss your needs, provide a quote, and get you set up in our secure client portal."
           }
         }
       ]
@@ -322,6 +322,66 @@
   </div>
 </section>
 
+<!-- Client Portal Access Section -->
+<section class="section-container">
+  <div class="max-w-5xl mx-auto">
+    <div class="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-2xl p-8 md:p-12 shadow-lg">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 bg-primary-100 px-4 py-2 rounded-full mb-4">
+            <svg class="w-5 h-5 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span class="text-primary-700 font-semibold text-sm">Secure Access</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Existing Client Portal
+          </h2>
+          <p class="text-lg text-gray-700 mb-6">
+            Access your tax documents, upload files, and communicate with our team securely through our encrypted client portal. Available 24/7 from anywhere.
+          </p>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-secondary-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-gray-700">Download completed tax returns</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-secondary-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-gray-700">Securely upload tax documents</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-secondary-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-gray-700">Track your return status</span>
+            </li>
+          </ul>
+        </div>
+        <div class="text-center md:text-right">
+          <a
+            href="https://jettaxdocs.securefilepro.com/portal/#/login"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-3 bg-gradient-to-r from-primary-600 to-secondary-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-primary-700 hover:to-secondary-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+          >
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+            </svg>
+            Login to Client Portal
+          </a>
+          <p class="text-sm text-gray-600 mt-4">
+            New client? <a href="/contact" class="text-primary-600 font-semibold hover:underline">Get started here</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Why Choose Us Section -->
 <section class="bg-gradient-to-br from-primary-50 to-secondary-50 py-20">
   <div class="section-container">
@@ -367,7 +427,7 @@
             <div>
               <h3 class="text-xl font-semibold mb-2">24/7 Availability</h3>
               <p class="text-gray-600">
-                Call or text anytime. We're here when you need us with flexible scheduling.
+                Call 786-369-9058 or 954-667-0855 during business hours. Text 786-369-9058 anytime, 24/7. We're here when you need us with flexible scheduling.
               </p>
             </div>
           </div>
@@ -434,8 +494,8 @@
         </div>
         <div class="card bg-gradient-to-br from-primary-600 to-primary-700 text-white">
           <div class="text-4xl mb-2">🎯</div>
-          <div class="text-3xl font-bold mb-1">99%</div>
-          <div class="text-primary-100">Accuracy Rate</div>
+          <div class="text-3xl font-bold mb-1">Secure</div>
+          <div class="text-primary-100">Portal Access</div>
         </div>
       </div>
     </div>
@@ -551,6 +611,60 @@
   </div>
 </section>
 
+<!-- Google Review CTA Section -->
+<section class="section-container">
+  <div class="max-w-4xl mx-auto">
+    <div class="relative bg-gradient-to-br from-primary-50 via-secondary-50 to-primary-100 border-4 border-primary-400 rounded-2xl p-12 md:p-16 text-center shadow-2xl overflow-hidden">
+      <!-- Decorative corner accents -->
+      <div class="absolute top-0 right-0 w-32 h-32 bg-primary-300/20 rounded-bl-full"></div>
+      <div class="absolute bottom-0 left-0 w-32 h-32 bg-secondary-300/20 rounded-tr-full"></div>
+
+      <div class="relative z-10">
+        <!-- Star rating with badge -->
+        <div class="flex justify-center mb-6">
+          <div class="inline-flex flex-col items-center bg-white rounded-2xl px-8 py-4 shadow-lg border-2 border-primary-300">
+            <div class="flex gap-1 mb-2">
+              {#each Array(5) as _}
+                <svg class="w-8 h-8 text-yellow-500 drop-shadow-sm" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              {/each}
+            </div>
+            <span class="text-sm font-bold text-gray-700">4.9 out of 5 stars</span>
+          </div>
+        </div>
+
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Love Our Service? Share Your Experience!
+        </h2>
+        <p class="text-xl mb-8 text-gray-800 max-w-2xl mx-auto">
+          Your feedback helps us improve and helps others find the trusted tax service they deserve. Leave a review on Google and let others know about your experience with JET Tax Service Corp.
+        </p>
+        <a
+          href="https://g.page/r/CSTL5SPTKq9bEAE/review"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-3 bg-gradient-to-r from-primary-600 to-secondary-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:from-primary-700 hover:to-secondary-700 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 border-2 border-primary-700"
+        >
+          <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+          </svg>
+          Leave a Google Review
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
+        <p class="text-sm text-gray-700 font-medium mt-6 bg-white/60 rounded-full px-6 py-2 inline-block">
+          Takes less than 2 minutes • Helps future clients make informed decisions
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Parallax Section 2 -->
 <section
   class="relative py-32 bg-cover bg-center md:bg-fixed md:bg-top"
@@ -628,7 +742,7 @@
 
       <FAQItem
         question="How do I get started?"
-        answer="Getting started is easy! Click the 'Get Started' button to fill out our contact form, call us at 786-369-9058, or text us anytime. We'll schedule a free consultation to discuss your needs, provide a quote, and get you set up in our secure client portal."
+        answer="Getting started is easy! Click the 'Get Started' button to fill out our contact form, text us at 786-369-9058, or text us anytime. We'll schedule a free consultation to discuss your needs, provide a quote, and get you set up in our secure client portal."
       />
     </div>
   </div>

@@ -5,7 +5,7 @@
     {
       question: 'What are your business hours?',
       answer:
-        'Our office is open Monday-Friday, 10am-5pm. However, we are available 24/7 by phone or text at 786-369-9058 for your convenience.'
+        'Our office is open Monday-Friday, 10am-5pm. However, we are available 24/7 by text at 786-369-9058 for your convenience.'
     },
     {
       question: 'Do you offer virtual consultations?',
@@ -15,7 +15,7 @@
     {
       question: 'How quickly will you respond to my inquiry?',
       answer:
-        'We typically respond to all inquiries within 24 hours. For urgent matters, please call or text us directly at 786-369-9058.'
+        'We typically respond to all inquiries within 24 hours. For urgent matters, please text us directly at 786-369-9058.'
     },
     {
       question: 'Do you offer free consultations?',
@@ -407,7 +407,7 @@
             <div>
               <p class="font-semibold text-sm mb-1">After Hours Support</p>
               <p class="text-sm text-gray-600">
-                Available 24/7 by phone or text at
+                Available 24/7 by text at
                 <a href="tel:7863699058" class="text-primary-600 font-semibold hover:underline"
                   >786-369-9058</a
                 >

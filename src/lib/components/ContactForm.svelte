@@ -88,13 +88,18 @@
             </div>
             <div>
               <h3 class="font-semibold text-lg mb-1">Call or Text</h3>
-              <p class="text-gray-600 mb-2">Available 24/7</p>
-              <a href="tel:7863699058" class="text-primary-600 font-semibold hover:underline"
-                >786-369-9058</a
-              ><br />
-              <a href="tel:9546670855" class="text-primary-600 font-semibold hover:underline"
-                >954-667-0855</a
-              >
+              <p class="text-gray-600 mb-2">
+                <a href="tel:7863699058" class="text-primary-600 font-semibold hover:underline block"
+                  >786-369-9058</a
+                >
+                <span class="text-sm text-gray-500">Call or text anytime</span>
+              </p>
+              <p class="text-gray-600">
+                <a href="tel:9546670855" class="text-primary-600 font-semibold hover:underline block"
+                  >954-667-0855</a
+                >
+                <span class="text-sm text-gray-500">Business hours only</span>
+              </p>
             </div>
           </div>
         </div>

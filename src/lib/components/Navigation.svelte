@@ -10,6 +10,19 @@
     { label: 'Resources', href: '/resources' },
     { label: 'Pricing', href: '/pricing' }
   ];
+
+  // Check if current route matches the nav item
+  function isActive(href) {
+    const currentPath = $page.url.pathname;
+
+    // Exact match for home page
+    if (href === '/') {
+      return currentPath === '/';
+    }
+
+    // For other pages, check if current path starts with the href
+    return currentPath === href || currentPath.startsWith(href + '/');
+  }
 </script>
 
 <nav class="bg-white shadow-md sticky top-0 z-50">
@@ -33,11 +46,15 @@
           <a
             href={item.href}
             class="text-gray-700 hover:text-primary-600 font-medium transition-colors relative group"
-            class:text-primary-600={$page.url.pathname === item.href}
+            class:text-primary-600={isActive(item.href)}
+            class:font-bold={isActive(item.href)}
           >
             {item.label}
             <span
-              class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-600 group-hover:w-full transition-all duration-300"
+              class="absolute bottom-0 left-0 h-0.5 bg-primary-600 transition-all duration-300"
+              class:w-full={isActive(item.href)}
+              class:w-0={!isActive(item.href)}
+              class:group-hover:w-full={!isActive(item.href)}
             ></span>
           </a>
         {/each}
@@ -130,8 +147,11 @@
         {#each navItems as item}
           <a
             href={item.href}
-            class="block py-3 text-gray-700 hover:text-primary-600 font-medium text-lg transition-colors"
-            class:text-primary-600={$page.url.pathname === item.href}
+            class="block py-3 text-gray-700 hover:text-primary-600 font-medium text-lg transition-colors border-l-4 -ml-6 pl-6"
+            class:text-primary-600={isActive(item.href)}
+            class:font-bold={isActive(item.href)}
+            class:border-primary-600={isActive(item.href)}
+            class:border-transparent={!isActive(item.href)}
             onclick={() => (mobileMenuOpen = false)}
           >
             {item.label}

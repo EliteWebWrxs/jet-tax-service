@@ -6,7 +6,8 @@
     { label: 'Small Business', href: '/small-business' },
     { label: 'Resources', href: '/resources' },
     { label: 'Pricing', href: '/pricing' },
-    { label: 'Contact Us', href: '/contact' }
+    { label: 'Contact Us', href: '/contact' },
+    { label: 'Client Portal', href: 'https://jettaxdocs.securefilepro.com/portal/#/login', external: true }
   ];
 
   const services = [
@@ -41,7 +42,10 @@
         </p>
         <div class="space-y-2 text-sm">
           <p>📍 4929 N University Drive<br />Lauderhill, FL 33351</p>
-          <p>📞 <a href="tel:7863699058" class="hover:text-white">786-369-9058</a></p>
+          <p>
+            📞 <a href="tel:7863699058" class="hover:text-white">786-369-9058</a> (Call or Text)<br />
+            📞 <a href="tel:9546670855" class="hover:text-white">954-667-0855</a> (Business Hours)
+          </p>
           <p>
             📧 <a href="mailto:info@jettaxservicecorp.com" class="hover:text-white"
               >info@jettaxservicecorp.com</a
@@ -56,7 +60,12 @@
         <ul class="space-y-2 text-sm">
           {#each quickLinks as link}
             <li>
-              <a href={link.href} class="hover:text-white transition-colors">
+              <a
+                href={link.href}
+                class="hover:text-white transition-colors"
+                target={link.external ? '_blank' : '_self'}
+                rel={link.external ? 'noopener noreferrer' : ''}
+              >
                 {link.label}
               </a>
             </li>
