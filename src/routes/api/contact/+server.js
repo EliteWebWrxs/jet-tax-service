@@ -25,7 +25,7 @@ export async function POST({ request }) {
     // Email content
     const mailOptions = {
       from: `"JET Tax Service Website" <${GOOGLE_EMAIL}>`,
-      to: 'mrmichael423@icloud.com',
+      to: 'info@jettaxservicecorp.com',
       replyTo: email,
       subject: `New Contact Form Submission from ${name}`,
       html: `
