@@ -205,11 +205,16 @@
       <div
         class="bg-white/10 backdrop-blur-sm rounded-xl p-6 max-w-2xl mx-auto border border-white/20"
       >
-        <p class="text-lg mb-4">Already know what you need? Pay securely below with Square.</p>
+        <p class="text-lg mb-4">
+          Ready to get started? Pay securely online with Square for fast, convenient tax and business
+          services.
+        </p>
         <p class="text-blue-100">
-          Need help choosing the right service?
-          <a href="/contact" class="text-white font-semibold hover:underline">Contact us</a>
-          for a free consultation.
+          Not sure which service is right for you?
+          <a href="/contact" class="text-white font-semibold hover:underline">
+            Schedule a Free Tax Consultation
+          </a>
+          with our expert team.
         </p>
       </div>
     </div>
@@ -259,8 +264,9 @@
           target={service.squareLink.startsWith('http') ? '_blank' : '_self'}
           rel={service.squareLink.startsWith('http') ? 'noopener noreferrer' : ''}
           class="btn bg-gradient-to-r from-primary-600 to-secondary-600 text-white hover:from-primary-700 hover:to-secondary-700 w-full justify-center mt-auto"
+          aria-label={`Pay securely for ${service.name}`}
         >
-          {service.price === 'Contact Us' ? 'Get Quote' : 'Pay Now'}
+          {service.price === 'Contact Us' ? 'Request Custom Quote' : 'Pay Securely Online'}
           <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path
               stroke-linecap="round"
@@ -292,13 +298,18 @@
           />
         </svg>
       </div>
-      <h3 class="text-2xl font-bold text-gray-900 mb-3">Secure Payment Processing</h3>
+      <h3 class="text-2xl font-bold text-gray-900 mb-3">
+        Secure Online Tax & Business Service Payments
+      </h3>
       <p class="text-gray-700 mb-4">
-        All payments are processed securely through Square. We never store your payment information.
+        All tax preparation and business service payments are processed securely through Square's
+        encrypted payment system. Your financial information is protected with bank-level security.
+        We never store your payment information.
       </p>
       <p class="text-sm text-gray-600">
-        Prices shown are starting prices. Complex returns or additional services may require
-        additional fees. We'll always provide a quote before proceeding.
+        Prices shown are starting prices for standard tax and business services. Complex tax returns
+        or additional services may require custom pricing. We'll always provide a detailed quote
+        before proceeding with your tax preparation or business filing.
       </p>
     </div>
   </div>
@@ -309,19 +320,27 @@
   <div
     class="bg-gradient-to-r from-primary-600 to-secondary-600 rounded-2xl p-12 md:p-16 text-center text-white"
   >
-    <h2 class="text-3xl md:text-4xl font-bold mb-4">Have Questions About Pricing?</h2>
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+      Questions About Tax Services or Business Pricing?
+    </h2>
     <p class="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
-      We're happy to discuss your specific needs and provide a detailed quote.
+      Get expert advice on tax preparation costs, business formation fees, and bookkeeping services.
+      Our tax professionals are ready to provide a detailed quote customized to your needs.
     </p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="/contact" class="btn bg-white text-primary-700 hover:bg-gray-100 px-8 py-4 text-lg">
-        Contact Us
+      <a
+        href="/contact"
+        class="btn bg-white text-primary-700 hover:bg-gray-100 px-8 py-4 text-lg"
+        aria-label="Contact JET Tax Service for pricing quote"
+      >
+        Get Free Quote & Consultation
       </a>
       <a
         href="tel:7863699058"
         class="btn border-2 border-white text-white hover:bg-white/10 px-8 py-4 text-lg"
+        aria-label="Call JET Tax Service at 786-369-9058"
       >
-        Call 786-369-9058
+        Call for Immediate Assistance
       </a>
     </div>
   </div>
