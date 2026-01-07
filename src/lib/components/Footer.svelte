@@ -7,7 +7,11 @@
     { label: 'Resources', href: '/resources' },
     { label: 'Pricing', href: '/pricing' },
     { label: 'Contact Us', href: '/contact' },
-    { label: 'Client Portal', href: 'https://jettaxdocs.securefilepro.com/portal/#/login', external: true }
+    {
+      label: 'Client Portal',
+      href: 'https://jettaxdocs.securefilepro.com/portal/#/login',
+      external: true
+    }
   ];
 
   const services = [
@@ -43,7 +47,8 @@
         <div class="space-y-2 text-sm">
           <p>📍 4929 N University Drive<br />Lauderhill, FL 33351</p>
           <p>
-            📞 <a href="tel:7863699058" class="hover:text-white">786-369-9058</a> (Call or Text)<br />
+            📞 <a href="tel:7863699058" class="hover:text-white">786-369-9058</a> (Call or Text)<br
+            />
             📞 <a href="tel:9546670855" class="hover:text-white">954-667-0855</a> (Business Hours)
           </p>
           <p>
@@ -144,14 +149,14 @@
         <a href="/terms" class="hover:text-white">Terms & Conditions</a>
       </div>
       <div class="mt-4 text-xs text-gray-500">
-        Website designed and developed by
+        Website by
         <a
           href="https://khalstead.com"
           target="_blank"
           rel="noopener noreferrer"
           class="hover:text-primary-400 transition-colors"
         >
-          Kevin Halstead
+          Kevin Halstead, EliteWebWrxs
         </a>
       </div>
     </div>
