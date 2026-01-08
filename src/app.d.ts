@@ -8,7 +8,13 @@ declare namespace App {
 
   // interface Platform {}
 
-  // interface PrivateEnv {}
+  interface PrivateEnv {
+    SANITY_WRITE_TOKEN: string;
+  }
 
-  // interface PublicEnv {}
+  interface PublicEnv {
+    PUBLIC_SANITY_PROJECT_ID: string;
+    PUBLIC_SANITY_DATASET: string;
+    PUBLIC_SANITY_API_READ_TOKEN: string;
+  }
 }
