@@ -2,13 +2,14 @@
   // @ts-nocheck
 
   let { data } = $props();
-  const { services } = data;
 
-  const categories = ['All', ...new Set(services.map((s) => s.category))];
+  const categories = $derived(['All', ...new Set(data.services.map((s) => s.category))]);
   let selectedCategory = $state('All');
 
   const filteredServices = $derived(
-    selectedCategory === 'All' ? services : services.filter((s) => s.category === selectedCategory)
+    selectedCategory === 'All'
+      ? data.services
+      : data.services.filter((s) => s.category === selectedCategory)
   );
 </script>
 

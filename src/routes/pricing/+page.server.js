@@ -1,8 +1,9 @@
 import { sanityClient } from '$lib/sanityClient';
 import { error } from '@sveltejs/kit';
 
-export async function load() {
+export async function load({ setHeaders }) {
   try {
+    // Fetch services from Sanity (CDN is already enabled in sanityClient config)
     const services = await sanityClient.fetch(
       `*[_type == "service"] | order(displayOrder asc) {
         _id,
@@ -14,6 +15,11 @@ export async function load() {
         displayOrder
       }`
     );
+
+    // Set cache headers for CDN and browser caching (20 minutes = 1200 seconds)
+    setHeaders({
+      'Cache-Control': 'public, max-age=0, s-maxage=1200, stale-while-revalidate=600'
+    });
 
     return {
       services
