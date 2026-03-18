@@ -36,7 +36,7 @@
     property="og:description"
     content="Transparent pricing for tax and business services. Pay securely online with Square."
   />
-  <meta property="og:image" content="https://jettaxservicecorp.com/og-image.jpg" />
+  <meta property="og:image" content="https://jettaxservicecorp.com/logo.webp" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -49,7 +49,39 @@
     name="twitter:description"
     content="Transparent pricing for tax and business services. Pay securely online."
   />
-  <meta name="twitter:image" content="https://jettaxservicecorp.com/og-image.jpg" />
+  <meta name="twitter:image" content="https://jettaxservicecorp.com/logo.webp" />
+
+  <!-- Additional SEO -->
+  <meta name="author" content="JET Tax Service Corp" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="English" />
+
+  <!-- Structured Data - Service Pricing -->
+  {@html `
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Tax and Business Services",
+      "name": "JET Tax Service Corp Services & Pricing",
+      "description": "Professional tax preparation, business formation, bookkeeping, and payroll services with transparent pricing",
+      "url": "https://jettaxservicecorp.com/pricing",
+      "provider": {
+        "@id": "https://jettaxservicecorp.com/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "State",
+          "name": "Florida"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
+      ]
+    }
+    </script>
+  `}
 </svelte:head>
 
 <!-- Hero Section -->

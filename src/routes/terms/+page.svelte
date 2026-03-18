@@ -7,7 +7,7 @@
   <meta property="og:url" content="https://jettaxservicecorp.com/terms" />
   <meta property="og:title" content="Terms & Conditions | JET Tax Service Corp" />
   <meta property="og:description" content="Terms and conditions for JET Tax Service Corp services. Client responsibilities and our commitments." />
-  <meta property="og:image" content="https://jettaxservicecorp.com/og-image.jpg" />
+  <meta property="og:image" content="https://jettaxservicecorp.com/logo.webp" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary" />

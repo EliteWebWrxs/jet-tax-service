@@ -451,7 +451,7 @@
     <meta property="og:url" content="https://jettaxservicecorp.com/resources/{slug}" />
     <meta property="og:title" content="{resource.title} | JET Tax Service Corp" />
     <meta property="og:description" content={resource.description} />
-    <meta property="og:image" content="https://jettaxservicecorp.com/og-image.jpg" />
+    <meta property="og:image" content="https://jettaxservicecorp.com/logo.webp" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="JET Tax Service Corp" />
     <meta property="article:publisher" content="JET Tax Service Corp" />
@@ -462,7 +462,7 @@
     <meta name="twitter:url" content="https://jettaxservicecorp.com/resources/{slug}" />
     <meta name="twitter:title" content="{resource.title} | JET Tax Service Corp" />
     <meta name="twitter:description" content={resource.description} />
-    <meta name="twitter:image" content="https://jettaxservicecorp.com/og-image.jpg" />
+    <meta name="twitter:image" content="https://jettaxservicecorp.com/logo.webp" />
 
     <!-- Additional SEO -->
     <meta name="author" content="JET Tax Service Corp" />

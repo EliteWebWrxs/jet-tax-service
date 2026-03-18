@@ -101,7 +101,7 @@
     property="og:description"
     content="Free tax and business resources including checklists, guides, and calendars. Download personal tax filing checklists, business tax documents, bookkeeping guides, and tax planning tools."
   />
-  <meta property="og:image" content="https://jettaxservicecorp.com/og-image.jpg" />
+  <meta property="og:image" content="https://jettaxservicecorp.com/logo.webp" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content="JET Tax Service Corp" />
 
@@ -116,7 +116,7 @@
     name="twitter:description"
     content="Free tax and business resources including checklists, guides, and calendars. Download personal tax filing checklists, business tax documents, bookkeeping guides, and tax planning tools."
   />
-  <meta name="twitter:image" content="https://jettaxservicecorp.com/og-image.jpg" />
+  <meta name="twitter:image" content="https://jettaxservicecorp.com/logo.webp" />
 
   <!-- Additional SEO -->
   <meta name="author" content="JET Tax Service Corp" />

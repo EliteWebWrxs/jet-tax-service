@@ -53,7 +53,7 @@
     property="og:description"
     content="Expert tax and business services available 24/7. Free consultation, virtual services nationwide. Call 786-369-9058 or visit us in Lauderhill, FL."
   />
-  <meta property="og:image" content="https://jettaxservicecorp.com/og-image.jpg" />
+  <meta property="og:image" content="https://jettaxservicecorp.com/logo.webp" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content="JET Tax Service Corp" />
 
@@ -68,7 +68,7 @@
     name="twitter:description"
     content="Expert tax and business services available 24/7. Free consultation, virtual services nationwide. Call 786-369-9058."
   />
-  <meta name="twitter:image" content="https://jettaxservicecorp.com/og-image.jpg" />
+  <meta name="twitter:image" content="https://jettaxservicecorp.com/logo.webp" />
 
   <!-- Additional SEO -->
   <meta name="author" content="JET Tax Service Corp" />

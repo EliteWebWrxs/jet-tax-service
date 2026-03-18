@@ -7,7 +7,7 @@
   <meta property="og:url" content="https://jettaxservicecorp.com/privacy" />
   <meta property="og:title" content="Privacy Policy | JET Tax Service Corp" />
   <meta property="og:description" content="Learn how we collect, use, and protect your personal and financial information." />
-  <meta property="og:image" content="https://jettaxservicecorp.com/og-image.jpg" />
+  <meta property="og:image" content="https://jettaxservicecorp.com/logo.webp" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary" />

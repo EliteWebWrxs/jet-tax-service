@@ -12,16 +12,17 @@ export async function GET() {
     { url: '/terms', priority: '0.3', changefreq: 'yearly' }
   ];
 
-  // TODO: If you add dynamic resource pages from Sanity, fetch them here
-  // Example:
-  // const resources = await sanityClient.fetch(`*[_type == "resource"]{ "slug": slug.current }`);
-  // const dynamicPages = resources.map(resource => ({
-  //   url: `/resources/${resource.slug}`,
-  //   priority: '0.6',
-  //   changefreq: 'monthly'
-  // }));
+  // Resource pages
+  const resourcePages = [
+    { url: '/resources/personal-tax-filing-checklist', priority: '0.6', changefreq: 'monthly' },
+    { url: '/resources/business-tax-checklist', priority: '0.6', changefreq: 'monthly' },
+    { url: '/resources/first-year-business-checklist', priority: '0.6', changefreq: 'monthly' },
+    { url: '/resources/tax-deduction-guide', priority: '0.6', changefreq: 'monthly' },
+    { url: '/resources/quarterly-tax-calendar', priority: '0.6', changefreq: 'monthly' },
+    { url: '/resources/bookkeeping-best-practices', priority: '0.6', changefreq: 'monthly' }
+  ];
 
-  const pages = [...staticPages];
+  const pages = [...staticPages, ...resourcePages];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
